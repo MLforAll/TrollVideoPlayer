@@ -8,6 +8,7 @@ It blocks all workspaces (spaces) on all monitors.
 In a terminal window (ssh for best effect) :
 
 `$ /path/to/bin -path=/path/to/video.ext`
+
 `$ /path/to/bin -url=http://path.to.web/video.ext`
 
 # Known bugs
