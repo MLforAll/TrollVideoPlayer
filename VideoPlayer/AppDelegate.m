@@ -68,7 +68,6 @@ struct kvo {
     [ctx->durText setAlignment:NSTextAlignmentCenter];
     [ctx->durText setFont:[NSFont systemFontOfSize:25 weight:NSFontWeightBold]];
     ctx->duration = CMTimeMake(0, 0);
-    //ctx->player = [[AVPlayer alloc] initWithURL:url];
     ctx->player = [AVPlayer playerWithURL:url];
 
     // Creating windows
