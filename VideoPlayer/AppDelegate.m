@@ -57,11 +57,14 @@ struct kvo {
     // Declarations
     NSArray *screens = [NSScreen screens];
     struct kvo *ctx = (struct kvo*)malloc(sizeof(struct kvo));
+    bzero((void*)ctx, sizeof(struct kvo));
 
     // Setting context
     ctx->holders = [NSMutableArray new];
     ctx->durText = [[NSTextField alloc] initWithFrame:NSMakeRect([screens[0] frame].size.width - TIME_WIDTH - 50, [screens[0] frame].size.height - 75, TIME_WIDTH, 35)];
     [ctx->durText setEditable:NO];
+    [ctx->durText setStringValue:@"Loading..."];
+    [ctx->durText setBackgroundColor:[NSColor blackColor]];
     [ctx->durText setAlignment:NSTextAlignmentCenter];
     [ctx->durText setFont:[NSFont systemFontOfSize:25 weight:NSFontWeightBold]];
     ctx->duration = CMTimeMake(0, 0);
