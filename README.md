@@ -13,4 +13,4 @@ In a terminal window (ssh for best effect) :
 
 # Known bugs
 
-URL mode segfaults on macOS High Sierra 10.13.6
+NONE ;)
